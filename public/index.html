@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NTI Task Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <div class="brand">
+          <span class="brand__badge">NTI</span>
+          <h1>Task Manager</h1>
+        </div>
+        <p class="app__subtitle">
+          A demo app proving the Cloud Agent environment runs end to end.
+        </p>
+      </header>
+
+      <form id="task-form" class="task-form" autocomplete="off">
+        <input
+          id="task-input"
+          class="task-form__input"
+          type="text"
+          placeholder="What needs to be done?"
+          aria-label="Task title"
+          required
+        />
+        <button class="task-form__button" type="submit">Add task</button>
+      </form>
+
+      <section class="stats" id="stats" aria-live="polite"></section>
+
+      <ul id="task-list" class="task-list"></ul>
+
+      <p id="empty-state" class="empty-state">No tasks yet. Add your first one above.</p>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
